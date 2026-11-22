@@ -2,7 +2,7 @@
 
 **Un índice local, de sólo lectura, de tus notas en Markdown *y* de las memorias de tus agentes de IA, servido por MCP, que te avisa cuando se contradicen.**
 
-<!-- demo gif -->
+![demo de cerebro-memory: tres contradicciones entre notas, memorias de agentes y docs de repos](https://raw.githubusercontent.com/CesarMg91/cerebro-mcp/main/docs/demo.gif)
 
 [English](README.md)
 

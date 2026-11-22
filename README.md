@@ -2,7 +2,7 @@
 
 **A local, read-only index over your Markdown notes *and* your AI agents' memories, served over MCP, that tells you when they contradict each other.**
 
-<!-- demo gif -->
+![cerebro-memory demo: three contradictions found between notes, agent memories and repo docs](https://raw.githubusercontent.com/CesarMg91/cerebro-mcp/main/docs/demo.gif)
 
 [Español](README.es.md)
 
