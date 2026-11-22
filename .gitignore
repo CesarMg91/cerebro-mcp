@@ -1,0 +1,19 @@
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+build/
+dist/
+*.egg-info/
+
+# Local indexes and proposals (disposable)
+.cerebro/
+*.db
+*.db-wal
+*.db-shm
+
+# Local config (may point at private folders)
+/cerebro.toml
+!src/cerebro_mcp/demo_vault/cerebro.toml

@@ -1,0 +1,3 @@
+- [Pricing](pricing.md) — prices and trial on the pricing page
+- [Site stack](site-stack.md) — how the site is built and deployed, launch countdown
+- [Copy rules](feedback-copy.md) — how Lucía wants the copy written

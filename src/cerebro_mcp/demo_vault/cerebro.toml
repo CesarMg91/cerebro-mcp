@@ -1,0 +1,35 @@
+# Config for `cerebro demo`. Every path here is relative to this folder.
+#
+# The demo belongs to Lucía, a fictional solo builder making a habit tracker
+# called Streak. Her notes, her coding agents' memories and her repo docs
+# disagree on a few facts. That is the point of the demo.
+
+[index]
+db = ".cerebro/index.db"
+proposals = ".cerebro/proposals"
+
+[[source]]
+name = "notes"
+kind = "vault"
+path = "notes"
+scope = "personal"
+exclude = ["Templates/**"]
+
+[[source]]
+name = "agent-memory"
+kind = "claude-code-memory"
+path = "agent-memory"
+scope = "work"
+
+[[source]]
+name = "repo-docs"
+kind = "glob"
+path = "repo-docs"
+include = ["*/docs/**/*.md", "*/AGENTS.md"]
+scope = "work"
+
+[privacy]
+private_folders = ["private", "people"]
+private_frontmatter = "private"
+redact = ["secrets", "cards"]
+hidden_scopes = []

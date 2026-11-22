@@ -1,0 +1,48 @@
+[project]
+name = "cerebro-mcp"
+version = "0.1.0"
+description = "A local, read-only index over your Markdown notes and your AI agents' memories, served over MCP, with a tool that finds where they contradict each other."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.11"
+authors = [{ name = "cerebro-mcp contributors" }]
+keywords = ["mcp", "obsidian", "markdown", "search", "embeddings", "sqlite", "claude"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Text Processing :: Indexing",
+]
+dependencies = [
+    "fastembed>=0.9,<1",
+    "mcp>=2.3,<3",
+    "numpy>=1.26",
+    "platformdirs>=4",
+    "pydantic>=2.7",
+    "pyyaml>=6.0",
+    "sqlite-vec>=0.1.6",
+]
+
+[project.scripts]
+cerebro = "cerebro_mcp.cli:main"
+cerebro-mcp = "cerebro_mcp.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8", "anyio>=4"]
+
+[build-system]
+requires = ["uv_build>=0.8,<0.13"]
+build-backend = "uv_build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "model: needs the real embedding model (downloads it once); run with `-m model`",
+]
+addopts = "-m 'not model'"

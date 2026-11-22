@@ -1,0 +1,4 @@
+- [Project overview](project-overview.md) — what Streak is, stack, current version, launch date
+- [Monetization](monetization.md) — free tier and Pro
+- [Lucía's preferences](user-preferences.md) — how she likes to work with agents
+- [Release process](release-process.md) — cutting a beta build

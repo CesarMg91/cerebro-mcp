@@ -1,0 +1,6 @@
+---
+type: daily
+---
+# {{date}}
+
+templatemarker

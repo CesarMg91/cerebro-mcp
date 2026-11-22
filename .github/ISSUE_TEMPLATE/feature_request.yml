@@ -1,0 +1,34 @@
+name: Feature request
+description: Suggest a new source kind, tool, redaction pack or improvement
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        cerebro stays small, local and read-only on purpose. Ideas that keep it that way have the best chance.
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What are you trying to do, and what gets in the way today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What you would like
+      description: The behavior you want. CLI or MCP examples help.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you considered
+  - type: checkboxes
+    id: principles
+    attributes:
+      label: Fits the principles
+      options:
+        - label: It keeps cerebro read-only on source files.
+        - label: It works offline, with no new network calls.
+        - label: It does not weaken the private-notes filter or redaction.

@@ -1,0 +1,58 @@
+name: Bug report
+description: Something does not work as documented
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. **If the bug could expose private notes or secrets, do not file it here**: use the repository's Security tab ("Report a vulnerability"), see SECURITY.md.
+
+        Never paste your real notes or your `index.db`. Reproduce with fictional files or the demo vault.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, what you got.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: Commands, a minimal `cerebro.toml` and fictional sample files if needed.
+      placeholder: |
+        1. uvx cerebro-mcp demo --keep
+        2. cerebro search "..."
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: doctor
+    attributes:
+      label: Output of `cerebro doctor`
+      description: Remove any paths or names you do not want to share.
+      render: text
+  - type: input
+    id: version
+    attributes:
+      label: cerebro-mcp version
+      placeholder: "0.1.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: OS
+      options: [Windows, macOS, Linux, Other]
+    validations:
+      required: true
+  - type: input
+    id: python
+    attributes:
+      label: Python version
+      placeholder: "3.12"
+  - type: dropdown
+    id: client
+    attributes:
+      label: Where it happened
+      options: [CLI, Claude Code, Claude Desktop, Codex, Cursor, Other MCP client]

@@ -1,0 +1,1 @@
+- [Pricing](pricing.md) — what Pro costs
