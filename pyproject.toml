@@ -1,6 +1,6 @@
 [project]
 name = "cerebro-memory"
-version = "0.1.1"
+version = "0.2.0"
 description = "A local, read-only index over your Markdown notes and your AI agents' memories, served over MCP, with a tool that finds where they contradict each other."
 readme = "README.md"
 license = "MIT"
