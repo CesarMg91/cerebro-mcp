@@ -21,7 +21,7 @@ body:
       label: Steps to reproduce
       description: Commands, a minimal `cerebro.toml` and fictional sample files if needed.
       placeholder: |
-        1. uvx cerebro-mcp demo --keep
+        1. uvx cerebro-memory demo --keep
         2. cerebro search "..."
         3. ...
     validations:
@@ -35,7 +35,7 @@ body:
   - type: input
     id: version
     attributes:
-      label: cerebro-mcp version
+      label: cerebro-memory version
       placeholder: "0.1.0"
     validations:
       required: true

@@ -222,7 +222,7 @@ def cmd_doctor(args) -> int:
     from . import embeddings, index, sources
 
     ok = True
-    print(f"cerebro-mcp {__version__} · Python {platform.python_version()} · {platform.system()}")
+    print(f"cerebro-memory {__version__} · Python {platform.python_version()} · {platform.system()}")
     found = config_mod.find(getattr(args, "config", None))
     if found is None or not found.is_file():
         print(f"[!!] config: not found{f' ({found})' if found else ''}. Run `cerebro init`.")
@@ -297,7 +297,7 @@ def build_parser() -> argparse.ArgumentParser:
         prog="cerebro",
         description="A local, read-only index over your Markdown notes and your AI agents' memories, served over MCP.",
     )
-    ap.add_argument("--version", action="version", version=f"cerebro-mcp {__version__}")
+    ap.add_argument("--version", action="version", version=f"cerebro-memory {__version__}")
     ap.add_argument("--config", default=None, help="path to cerebro.toml")
     sub = ap.add_subparsers(dest="cmd", required=True)
 

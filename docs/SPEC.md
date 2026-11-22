@@ -1,4 +1,4 @@
-# cerebro-mcp — v0.1 spec
+# cerebro-memory — v0.1 spec
 
 > A local, read-only index over your Markdown notes **and your AI agents' memories**,
 > served over MCP — with a tool that tells you when they contradict each other.
@@ -23,8 +23,8 @@ both languages (multilingual embeddings).
 
 ## Package
 
-- PyPI name `cerebro-mcp`, import package `cerebro_mcp`, console command `cerebro`.
-- `uvx cerebro-mcp demo` must work on a clean machine (Windows, macOS, Linux).
+- PyPI name `cerebro-memory`, import package `cerebro_mcp`, console command `cerebro`.
+- `uvx cerebro-memory demo` must work on a clean machine (Windows, macOS, Linux).
 - Python `>=3.11`. License MIT.
 - Index: SQLite FTS5 + `sqlite-vec`, hybrid ranking with RRF.
 - Embeddings: multilingual, small, CPU, offline after the first model download.

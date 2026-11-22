@@ -1,4 +1,4 @@
-# cerebro-mcp
+# cerebro-memory
 
 **A local, read-only index over your Markdown notes *and* your AI agents' memories, served over MCP, that tells you when they contradict each other.**
 
@@ -29,7 +29,7 @@ to search it and one command to ask: *where do my sources disagree?*
 You need [uv](https://docs.astral.sh/uv/).
 
 ```sh
-uvx cerebro-mcp demo
+uvx cerebro-memory demo
 ```
 
 That copies a small fictional vault to a temp folder, indexes it and prints the
@@ -39,7 +39,7 @@ after that everything runs offline.
 Then point it at your own notes:
 
 ```sh
-uv tool install cerebro-mcp        # installs the `cerebro` command
+uv tool install cerebro-memory        # installs the `cerebro` command
 cerebro init --vault ~/Obsidian    # writes cerebro.toml; adds ~/.claude/projects if it exists
 cerebro index                      # incremental; re-run any time
 cerebro search "pricing decision"
@@ -48,10 +48,10 @@ cerebro contradictions "launch date" --across-sources
 
 ## What it finds
 
-Real output of `uvx cerebro-mcp demo` (it prints the strongest disagreement per pair of notes; ask about one topic with `cerebro contradictions "<topic>"`):
+Real output of `uvx cerebro-memory demo` (it prints the strongest disagreement per pair of notes; ask about one topic with `cerebro contradictions "<topic>"`):
 
 ```text
-$ uvx cerebro-mcp demo
+$ uvx cerebro-memory demo
 Demo vault copied to /tmp/cerebro-demo-x1y2z3/demo_vault
 Indexed 26 notes from 3 sources (notes, agent-memory, repo-docs): 2 private (kept out of every result), 1 line(s) redacted, mode hybrid.
 
@@ -85,12 +85,12 @@ its README lists every fact planted in it.
 
 `cerebro serve` is an MCP server over stdio. Your client launches it; you never
 run it by hand. If you installed the tool, the command is `cerebro serve`;
-without installing, it is `uvx cerebro-mcp serve`.
+without installing, it is `uvx cerebro-memory serve`.
 
 **Claude Code**
 
 ```sh
-claude mcp add cerebro --scope user -- uvx cerebro-mcp serve
+claude mcp add cerebro --scope user -- uvx cerebro-memory serve
 ```
 
 **Codex** (`~/.codex/config.toml`)
@@ -98,7 +98,7 @@ claude mcp add cerebro --scope user -- uvx cerebro-mcp serve
 ```toml
 [mcp_servers.cerebro]
 command = "uvx"
-args = ["cerebro-mcp", "serve"]
+args = ["cerebro-memory", "serve"]
 ```
 
 **Cursor** (`~/.cursor/mcp.json`) and **Claude Desktop** (`claude_desktop_config.json`)
@@ -108,7 +108,7 @@ args = ["cerebro-mcp", "serve"]
   "mcpServers": {
     "cerebro": {
       "command": "uvx",
-      "args": ["cerebro-mcp", "serve"]
+      "args": ["cerebro-memory", "serve"]
     }
   }
 }

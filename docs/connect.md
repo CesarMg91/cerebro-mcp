@@ -8,8 +8,8 @@ Two ways to launch it:
 
 | You have | Command |
 |---|---|
-| Nothing installed (just uv) | `uvx cerebro-mcp serve` |
-| `uv tool install cerebro-mcp` | `cerebro serve` |
+| Nothing installed (just uv) | `uvx cerebro-memory serve` |
+| `uv tool install cerebro-memory` | `cerebro serve` |
 
 `uvx` caches the package after the first run, so later starts are fast. The
 installed command starts a little faster and does not check for new versions.
@@ -30,13 +30,13 @@ Run `cerebro doctor` in a terminal to see the path of the config it finds.
 ## Claude Code
 
 ```sh
-claude mcp add cerebro --scope user -- uvx cerebro-mcp serve
+claude mcp add cerebro --scope user -- uvx cerebro-memory serve
 ```
 
 With a specific config:
 
 ```sh
-claude mcp add cerebro --scope user -e CEREBRO_CONFIG=/path/to/cerebro.toml -- uvx cerebro-mcp serve
+claude mcp add cerebro --scope user -e CEREBRO_CONFIG=/path/to/cerebro.toml -- uvx cerebro-memory serve
 ```
 
 `--scope user` makes it available in every project. Check with `claude mcp list`.
@@ -48,7 +48,7 @@ claude mcp add cerebro --scope user -e CEREBRO_CONFIG=/path/to/cerebro.toml -- u
 ```toml
 [mcp_servers.cerebro]
 command = "uvx"
-args = ["cerebro-mcp", "serve"]
+args = ["cerebro-memory", "serve"]
 # env = { CEREBRO_CONFIG = "/path/to/cerebro.toml" }
 ```
 
@@ -61,7 +61,7 @@ args = ["cerebro-mcp", "serve"]
   "mcpServers": {
     "cerebro": {
       "command": "uvx",
-      "args": ["cerebro-mcp", "serve"],
+      "args": ["cerebro-memory", "serve"],
       "env": { "CEREBRO_CONFIG": "/path/to/cerebro.toml" }
     }
   }
@@ -80,7 +80,7 @@ Edit `claude_desktop_config.json`:
   "mcpServers": {
     "cerebro": {
       "command": "uvx",
-      "args": ["cerebro-mcp", "serve"],
+      "args": ["cerebro-memory", "serve"],
       "env": { "CEREBRO_CONFIG": "/path/to/cerebro.toml" }
     }
   }
@@ -92,7 +92,7 @@ Restart the app after editing.
 ## Any other MCP client
 
 Anything that can launch a stdio server works. The command is `uvx` with
-arguments `cerebro-mcp serve`, or `cerebro` with argument `serve`.
+arguments `cerebro-memory serve`, or `cerebro` with argument `serve`.
 
 ## Windows notes
 

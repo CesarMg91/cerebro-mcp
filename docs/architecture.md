@@ -180,7 +180,7 @@ fastembed model because its built-in list has no small multilingual e5.
 - The whole environment (fastembed, onnxruntime, tokenizers, mcp) is about
   186 MB; with torch it would be over 700 MB.
 - The int8 model peaks at about 500 MB of RAM. It is the default because the
-  first run of `uvx cerebro-mcp demo` downloads less and starts faster.
+  first run of `uvx cerebro-memory demo` downloads less and starts faster.
 - Pick the full-precision export with `[index] model = "e5-small"` or
   `CEREBRO_MODEL=e5-small`. Changing the model drops old vectors and re-embeds
   on the next `cerebro index`.

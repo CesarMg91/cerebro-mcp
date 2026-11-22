@@ -1,12 +1,12 @@
 [project]
-name = "cerebro-mcp"
+name = "cerebro-memory"
 version = "0.1.0"
 description = "A local, read-only index over your Markdown notes and your AI agents' memories, served over MCP, with a tool that finds where they contradict each other."
 readme = "README.md"
 license = "MIT"
 license-files = ["LICENSE"]
 requires-python = ">=3.11"
-authors = [{ name = "cerebro-mcp contributors" }]
+authors = [{ name = "cerebro-memory contributors" }]
 keywords = ["mcp", "obsidian", "markdown", "search", "embeddings", "sqlite", "claude"]
 classifiers = [
     "Development Status :: 3 - Alpha",
@@ -31,7 +31,7 @@ dependencies = [
 
 [project.scripts]
 cerebro = "cerebro_mcp.cli:main"
-cerebro-mcp = "cerebro_mcp.cli:main"
+cerebro-memory = "cerebro_mcp.cli:main"
 
 [dependency-groups]
 dev = ["pytest>=8", "anyio>=4"]
@@ -39,6 +39,10 @@ dev = ["pytest>=8", "anyio>=4"]
 [build-system]
 requires = ["uv_build>=0.8,<0.13"]
 build-backend = "uv_build"
+
+[tool.uv.build-backend]
+# The distribution is `cerebro-memory` (PyPI); the import package stays `cerebro_mcp`.
+module-name = "cerebro_mcp"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
